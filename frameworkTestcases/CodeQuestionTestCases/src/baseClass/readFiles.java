@@ -17,7 +17,7 @@ public class readFiles {
 	public readFiles(){
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"\\frameworkTestcases\\CodeQuestionTestCases\\src\\main\\configs\\config.properties");
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\configs\\config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
