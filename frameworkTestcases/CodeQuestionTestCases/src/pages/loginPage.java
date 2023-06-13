@@ -8,24 +8,24 @@ import baseClass.readFiles;
 
 public class loginPage extends readFiles{
 	
-	@FindBy(name="email") WebElement email;
+	@FindBy(name="email")
+	static WebElement email;
+
+
+	@FindBy(name="password")
+	static WebElement password;
 	
-	@FindBy(name="password") WebElement password;
-	
-	@FindBy(name="btnSubmit") WebElement SubmitButton;
+	@FindBy(name="btnSubmit")
+	static WebElement SubmitButton;
 	
 	@FindBy(xpath="//img[contains(@class,'img-responsive')]")
 	WebElement CQLogo;
 	
 	@FindBy(id="alert-message") WebElement Alert;
-	
-	//@FindBy(id="alert-message") WebElement Password;
 
 	String message;
 	
-	public loginPage(){
-		PageFactory.initElements(driver, this);
-	}
+	public loginPage(){ PageFactory.initElements(driver, this); 	}
 	
 	
 	//Actions:
@@ -93,7 +93,7 @@ public class loginPage extends readFiles{
 		}
 
 
-		public String validateCredentials() {
+		public static String validateCredentials() {
 			email.sendKeys(prop.getProperty("email"));
 			password.sendKeys(prop.getProperty("password"));
 			SubmitButton.click();
@@ -106,7 +106,7 @@ public class loginPage extends readFiles{
 		}
 		
 		public void questionPage() throws InterruptedException {
-			driver.get(prop.getProperty("questionEdit"));
+			driver.get(prop.getProperty("questionList"));
 			Thread.sleep(2000);
 			
 		}

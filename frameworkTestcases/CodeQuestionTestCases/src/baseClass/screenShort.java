@@ -14,7 +14,9 @@ public class screenShort extends readFiles{
 		LocalDateTime now = LocalDateTime.now();   
 		
 		File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		System.out.println(System.getProperty("user.dir")+prop.getProperty("screenShort")+path+".png");
 		FileUtils.copyFile(screenshotFile, new File(System.getProperty("user.dir")+prop.getProperty("screenShort")+path+".png"));
-		}
+
+	}
 	}
 	
