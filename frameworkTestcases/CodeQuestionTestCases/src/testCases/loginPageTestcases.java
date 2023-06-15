@@ -37,6 +37,17 @@ public class loginPageTestcases extends loginPage{
 	
 	
 	static String title ;
+	@Test(priority=0)
+	public void checkPageStatus() throws Exception{
+		int status = loginPage.vlaidatePageStatus();
+		try {
+			Assert.assertEquals(status,"200");
+		}catch(AssertionError e){
+			screenShort.path="checkPageStatus"+status;
+			   screenShort.captureScreenMethod(); fail();
+			}
+	}
+	
 	@Test(priority=1)
 	public void loginPageTitleTest() throws Exception{
 		 title = loginPage.validateLoginPageTitle();
@@ -107,7 +118,9 @@ public class loginPageTestcases extends loginPage{
 	}
 	@Test(priority=7)
 	public void correctCredentials() throws Exception{ 
-		title = loginPage.validateCredentials();
+		String emailID = prop.getProperty("email");
+		String userPassword = prop.getProperty("password");
+		title = loginPage.validateCredentials(emailID,userPassword);
 		try {
 				Assert.assertEquals(title,prop.getProperty("defaultRoute"));
 				

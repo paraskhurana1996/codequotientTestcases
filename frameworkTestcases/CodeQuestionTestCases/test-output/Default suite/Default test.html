@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>7/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jun 07 12:24:40 IST 2023</td>
+<td>Started on:</td><td>Thu Jun 15 13:34:55 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>10 seconds (10626 ms)</td>
+<tr><td>Total time:</td><td>96 seconds (96425 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,11 +75,27 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCases.loginPageTestcases.emptyEmail()'><b>emptyEmail</b><br>Test class: testCases.loginPageTestcases</td>
-<td><div><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.fail(Assert.java:106)
-	at testCases.loginPageTestcases.emptyEmail(loginPageTestcases.java:76)
+<td title='testCases.questionPageTestcases.issue_3921()'><b>issue_3921</b><br>Test class: testCases.questionPageTestcases</td>
+<td><div><pre>org.openqa.selenium.InvalidArgumentException: invalid argument
+  (Session info: chrome=114.0.5735.134)
+Build info: version: &apos;4.8.3&apos;, revision: &apos;b19b418e60&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [58a6dd383f208c42ff6fc9e2286fb3ba, get {url=&quot;https://cqtestga.com/quest/list&quot;}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\pkhur\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62723}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62723/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 58a6dd383f208c42ff6fc9e2286fb3ba
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:297)
+	at testCases.questionPageTestcases.issue_3921(questionPageTestcases.java:123)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -106,11 +122,27 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace582702662", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace582702662'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.fail(Assert.java:106)
-	at testCases.loginPageTestcases.emptyEmail(loginPageTestcases.java:76)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1873189623", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1873189623'><pre>org.openqa.selenium.InvalidArgumentException: invalid argument
+  (Session info: chrome=114.0.5735.134)
+Build info: version: &apos;4.8.3&apos;, revision: &apos;b19b418e60&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [58a6dd383f208c42ff6fc9e2286fb3ba, get {url=&quot;https://cqtestga.com/quest/list&quot;}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\pkhur\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62723}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62723/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 58a6dd383f208c42ff6fc9e2286fb3ba
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:297)
+	at testCases.questionPageTestcases.issue_3921(questionPageTestcases.java:123)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -138,8 +170,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>1</td>
-<td>testCases.loginPageTestcases@6ed3ccb2</td></tr>
+<td>0</td>
+<td>testCases.questionPageTestcases@74e52ef6</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -149,35 +181,40 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCases.loginPageTestcases.loginPageTitleTest()'><b>loginPageTitleTest</b><br>Test class: testCases.loginPageTestcases</td>
+<td title='testCases.questionPageTestcases.correctCredentials()'><b>correctCredentials</b><br>Test class: testCases.questionPageTestcases</td>
+<td></td>
+<td>8</td>
+<td>testCases.questionPageTestcases@74e52ef6</td></tr>
+<tr>
+<td title='testCases.questionPageTestcases.crmLogoImageTest()'><b>crmLogoImageTest</b><br>Test class: testCases.questionPageTestcases</td>
 <td></td>
 <td>0</td>
-<td>testCases.loginPageTestcases@6ed3ccb2</td></tr>
+<td>testCases.questionPageTestcases@74e52ef6</td></tr>
 <tr>
-<td title='testCases.loginPageTestcases.crmLogoImageTest()'><b>crmLogoImageTest</b><br>Test class: testCases.loginPageTestcases</td>
+<td title='testCases.questionPageTestcases.openAttemptLink()'><b>openAttemptLink</b><br>Test class: testCases.questionPageTestcases</td>
+<td></td>
+<td>9</td>
+<td>testCases.questionPageTestcases@74e52ef6</td></tr>
+<tr>
+<td title='testCases.questionPageTestcases.loginPageTitleTest()'><b>loginPageTitleTest</b><br>Test class: testCases.questionPageTestcases</td>
 <td></td>
 <td>0</td>
-<td>testCases.loginPageTestcases@6ed3ccb2</td></tr>
+<td>testCases.questionPageTestcases@74e52ef6</td></tr>
 <tr>
-<td title='testCases.loginPageTestcases.incorrectPassword()'><b>incorrectPassword</b><br>Test class: testCases.loginPageTestcases</td>
+<td title='testCases.questionPageTestcases.issue_3458()'><b>issue_3458</b><br>Test class: testCases.questionPageTestcases</td>
+<td></td>
+<td>73</td>
+<td>testCases.questionPageTestcases@74e52ef6</td></tr>
+<tr>
+<td title='testCases.questionPageTestcases.checkPageStatus()'><b>checkPageStatus</b><br>Test class: testCases.questionPageTestcases</td>
 <td></td>
 <td>1</td>
-<td>testCases.loginPageTestcases@6ed3ccb2</td></tr>
+<td>testCases.questionPageTestcases@74e52ef6</td></tr>
 <tr>
-<td title='testCases.loginPageTestcases.incorrectEmail()'><b>incorrectEmail</b><br>Test class: testCases.loginPageTestcases</td>
+<td title='testCases.questionPageTestcases.issue_3322()'><b>issue_3322</b><br>Test class: testCases.questionPageTestcases</td>
 <td></td>
-<td>1</td>
-<td>testCases.loginPageTestcases@6ed3ccb2</td></tr>
-<tr>
-<td title='testCases.loginPageTestcases.emptyPassword()'><b>emptyPassword</b><br>Test class: testCases.loginPageTestcases</td>
-<td></td>
-<td>1</td>
-<td>testCases.loginPageTestcases@6ed3ccb2</td></tr>
-<tr>
-<td title='testCases.loginPageTestcases.correctCredentials()'><b>correctCredentials</b><br>Test class: testCases.loginPageTestcases</td>
-<td></td>
-<td>3</td>
-<td>testCases.loginPageTestcases@6ed3ccb2</td></tr>
+<td>4</td>
+<td>testCases.questionPageTestcases@74e52ef6</td></tr>
 </table><p>
 </body>
 </html>

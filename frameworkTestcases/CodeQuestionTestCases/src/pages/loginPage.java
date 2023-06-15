@@ -1,34 +1,43 @@
 package pages;
+import java.io.IOException;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import baseClass.GetHttpResponse;
 import baseClass.readFiles;
 
 
 public class loginPage extends readFiles{
 	
-	@FindBy(name="email")
-	static WebElement email;
-
-
-	@FindBy(name="password")
-	static WebElement password;
+	@FindBy(name="email") WebElement email;
 	
-	@FindBy(name="btnSubmit")
-	static WebElement SubmitButton;
+	@FindBy(name="password") WebElement password;
+	
+	@FindBy(name="btnSubmit") WebElement SubmitButton;
 	
 	@FindBy(xpath="//img[contains(@class,'img-responsive')]")
 	WebElement CQLogo;
 	
 	@FindBy(id="alert-message") WebElement Alert;
-
-	String message;
 	
-	public loginPage(){ PageFactory.initElements(driver, this); 	}
+	//@FindBy(id="alert-message") WebElement Password;
+
+	static String message;
+	
+	public loginPage(){
+		PageFactory.initElements(driver, this);
+	}
 	
 	
 	//Actions:
+	
+		public int vlaidatePageStatus() throws IOException {
+			String path = driver.getCurrentUrl();
+			return GetHttpResponse.httpStatus(path);
+			
+		}
 		public String validateLoginPageTitle(){
 			return driver.getTitle();
 		}
@@ -91,11 +100,13 @@ public class loginPage extends readFiles{
 			email.clear();
 			password.clear();
 		}
+	
 
-
-		public static String validateCredentials() {
-			email.sendKeys(prop.getProperty("email"));
-			password.sendKeys(prop.getProperty("password"));
+		public String validateCredentials( String emailID,String userPassword ) {
+			email.clear();
+			password.clear();
+			email.sendKeys(emailID);
+			password.sendKeys(userPassword);
 			SubmitButton.click();
 			try {
 				Thread.sleep(1000);
@@ -106,11 +117,18 @@ public class loginPage extends readFiles{
 		}
 		
 		public void questionPage() throws InterruptedException {
-			driver.get(prop.getProperty("questionList"));
+			driver.get(prop.getProperty("questionEdit"));
 			Thread.sleep(2000);
 			
 		}
+		public void questionMQAttempt() throws InterruptedException {
+			driver.get(prop.getProperty("questionAttempt"));
+			Thread.sleep(2000);
+		}
 		
+		public void logoutUser() {
+			driver.get(prop.getProperty("logoutURL"));
+		}
 		
 }
 
