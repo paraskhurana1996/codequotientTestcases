@@ -9,14 +9,14 @@ import baseClass.readFiles;
 public class loginPage extends readFiles{
 	
 	@FindBy(name="email")
-	static WebElement email;
+	public static WebElement email;
 
 
 	@FindBy(name="password")
-	static WebElement password;
+	public static WebElement password;
 	
 	@FindBy(name="btnSubmit")
-	static WebElement SubmitButton;
+	public static WebElement SubmitButton;
 	
 	@FindBy(xpath="//img[contains(@class,'img-responsive')]")
 	WebElement CQLogo;
