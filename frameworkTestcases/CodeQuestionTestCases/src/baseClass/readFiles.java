@@ -17,7 +17,7 @@ public class readFiles {
 	public readFiles(){
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\configs\\config.properties");
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"\\frameworkTestcases\\CodeQuestionTestCases\\src\\main\\configs\\config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -32,8 +32,7 @@ public class readFiles {
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+prop.getProperty("driverPath"));
-			driver = new ChromeDriver(); 
+			driver = new ChromeDriver();
 			}
 	
 		driver.manage().window().maximize();
