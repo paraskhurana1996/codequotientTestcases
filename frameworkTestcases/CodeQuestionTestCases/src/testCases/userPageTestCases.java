@@ -55,6 +55,20 @@ public class userPageTestCases extends userPage {
 
     }
 
+    @Test
+    public void issue_3456Test() throws Exception {
+        try {Thread.sleep(1000);
+            Assert.assertFalse(issue_3456());
+        }catch(AssertionError e){
+            screenShort.path="issue_3465";
+            screenShort.captureScreenMethod(); fail();
+        }
 
+    }
+
+    @Test
+    public void issue_3430Test(){
+        issue_3430();
+    }
 
 }

@@ -10,7 +10,7 @@ import java.util.List;
 
 public class userPage extends readFiles {
     @FindBy(xpath = "//*[@onclick=\"openAddingUserSidebar()\"]") static WebElement addUser;
-    @FindBy(xpath = "//*[@onclick=\"sendEmailPopup()\"]") static WebElement sendEmail;
+     @FindBy(xpath = "//*[@onclick=\"sendEmailPopup()\"]") static WebElement sendEmail;
     @FindBy(xpath = "//*[@class=\"tag-editor\"]") static WebElement sendMailTagEditor;
     @FindBy(xpath = "//*[@data-id=\"fltrUserType\"]") static WebElement roleDropdown;
     @FindBy(xpath = "//*[@id=\"fltrUserType\"]") static WebElement selectroleDropdown ;
@@ -33,7 +33,6 @@ public class userPage extends readFiles {
     public String validateUserPageTitle(){
         return driver.getTitle();
     }
-
     public boolean validateCQImage(){
         return CQlogoheader.isDisplayed();
     }
@@ -46,11 +45,16 @@ public class userPage extends readFiles {
     }
 
     public Boolean issue_3456() throws Exception {
+        openSendEmailTab();
         Actions action = new Actions(driver);
         action.moveToElement(sendMailTagEditor).click().sendKeys("123").build().perform();
-        Thread.sleep(1000);
         sideTabCloseButton.get(0).click();
+        Thread.sleep(1000);
         return alert.isDisplayed();
+
+    }
+
+    public void issue_3430(){
 
     }
 
